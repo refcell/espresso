@@ -2,6 +2,8 @@
 
 An interactive field guide to espresso-machine internals, with original exploded SVG diagrams and source-linked La Marzocco comparisons. Eight lessons connect the water circuit, boilers, pressure, group assembly, and steam system.
 
+[Open the tutorial](https://espresso-atelier.vercel.app).
+
 ## Run the tutorial
 
 Use Node.js 22 or newer and npm.
@@ -51,7 +53,13 @@ npm run build
 npm run preview
 ```
 
-Vite writes `dist/`. Relative asset paths and hash-based lesson links allow static hosting under a subdirectory. This repository does not configure a deployment.
+Vite writes `dist/`. Relative asset paths and hash-based lesson links allow static hosting under a subdirectory.
+
+## Deployment
+
+Vercel hosts the tutorial at [espresso-atelier.vercel.app](https://espresso-atelier.vercel.app) in the `andreasbigger/espresso-atelier` project. The project connects to `refcell/espresso` on GitHub and deploys pushes to `main` to production. It uses the Vite preset, `npm run build`, and the `dist` output directory.
+
+`.vercelignore` excludes local artifacts and dependencies from CLI uploads. `.vercel/` project-link files stay out of Git.
 
 ## Content and implementation
 
